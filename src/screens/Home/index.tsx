@@ -1,13 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Text, View } from 'react-native';
+import {MaterialCommunityIcons} from '@expo/vector-icons'
 
-import { styles } from './styles';
+import {
+  Container,
+  Header,
+  UserWrapper,
+  UserInfo,
+  Photo,
+  Gretting,
+  GrettingUser,
+  LogoutButton,
+  Icon,
+  Text,
+} from './styles';
 export function Home() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Container>
+      <Header>
+        <UserWrapper>
+          <UserInfo>
+            <Photo
+              source={{ uri: 'https://avatars.githubusercontent.com/elveson' }}
+            />
+            <Gretting>
+              Olá,
+              <GrettingUser> Elveson</GrettingUser>!
+            </Gretting>
+          </UserInfo>
+          <LogoutButton>
+            <Icon name="logout" />
+            <Text>Sair</Text>
+          </LogoutButton>
+        </UserWrapper>
+      </Header>
+    </Container>
   );
 }
