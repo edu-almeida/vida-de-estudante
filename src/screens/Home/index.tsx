@@ -16,20 +16,13 @@ import {
   HighlightCards,
   Title,
   HighlightCardsList,
-<<<<<<< HEAD
   Transactions
 } from './styles';
 import { HighlightCard } from '../../components/HighlightCard';
-=======
-} from './styles';
-import { HighlightCard } from '../../components/HightlightCard';
-
->>>>>>> fed0c22b854528b7cfc5348992dd0a8fb5aeb35e
 
 export function Home() {
   return (
     <Container>
-      {/* <CustomBackground /> */}
       <Header>
         <UserWrapper>
           <UserInfo>
