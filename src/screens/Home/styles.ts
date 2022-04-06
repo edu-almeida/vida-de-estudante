@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { RFValue } from 'react-native-responsive-fontsize';
-import {MaterialCommunityIcons} from '@expo/vector-icons'
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 export const Container = styled.View`
   flex: 1;
@@ -72,4 +72,29 @@ export const Text = styled.Text`
   font-family: ${({ theme }) => theme.fonts.regular};
   font-size: ${RFValue(15)}px;
   font-weight: bold;
+`;
+
+export const HighlightCards = styled.View`
+  padding: 0 20px;
+`;
+
+export const Title = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.medium};
+  font-size: ${RFValue(15)}px;
+
+  color: ${({ theme }) => theme.colors.title};
+
+  margin-bottom: 9px;
+`;
+
+export const HighlightCardsList = styled.ScrollView.attrs({
+  horizontal: true,
+  showsHorizontalScrollIndicator: false,
+
+})`
+  margin: ${RFValue(9)}px 0 ${RFValue(5)}px 0;
+`;
+
+export const Transactions = styled.View`
+  padding: 20px;
 `;
