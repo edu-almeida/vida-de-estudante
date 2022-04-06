@@ -10,8 +10,6 @@ import {
 import { ThemeProvider } from 'styled-components';
 import theme from './src/global/styles/theme';
 import { StatusBar } from 'react-native';
-import { AppRoutes } from './src/routes/app.routes';
-import CarregamentoComponent from './from xd/CarregamentoComponent';
 import { Home } from './src/screens/Home';
 
 export default function App() {
@@ -27,7 +25,7 @@ export default function App() {
         backgroundColor={theme.colors.background_dark}
         translucent
       />
-      <AppRoutes />
+      <Home />
     </ThemeProvider>
   );
 }
