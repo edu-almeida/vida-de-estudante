@@ -18,8 +18,7 @@ import {
   HighlightCardsList,
   Transactions
 } from './styles';
-import { CustomBackground } from '../../components/CustomBackground';
-import { HighlightCard } from '../../components/HighlightCard';
+import { HighlightCard } from '../../components/HightlightCard';
 
 export function Home() {
   return (
