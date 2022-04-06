@@ -16,7 +16,6 @@ import {
   HighlightCards,
   Title,
   HighlightCardsList,
-  yarn
 } from './styles';
 import { HighlightCard } from '../../components/HightlightCard';
 
