@@ -1,7 +1,9 @@
 import styled from 'styled-components/native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { RFValue } from 'react-native-responsive-fontsize';
-import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { FlatList, FlatListProps } from 'react-native';
+import { DataListProps } from '.';
 
 export const Container = styled.View`
   flex: 1;
@@ -27,7 +29,7 @@ export const UserWrapper = styled.View`
 
   padding: ${RFValue(14)}px ${RFValue(28)}px;
 
-  margin-top: ${RFValue(15)}px; 
+  margin-top: ${RFValue(15)}px;
 `;
 
 export const UserInfo = styled.View`
@@ -90,11 +92,19 @@ export const Title = styled.Text`
 export const HighlightCardsList = styled.ScrollView.attrs({
   horizontal: true,
   showsHorizontalScrollIndicator: false,
-
 })`
   margin: ${RFValue(9)}px 0 ${RFValue(5)}px 0;
 `;
 
+export const TransactionList = styled(
+  FlatList as new (
+    props: FlatListProps<DataListProps>
+  ) => FlatList<DataListProps>
+).attrs({
+  showsVerticalScrollIndicator: false,
+})``;
+
 export const Transactions = styled.View`
+  flex: 1;
   padding: 20px;
 `;
