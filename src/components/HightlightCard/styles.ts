@@ -1,6 +1,10 @@
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 import { Ionicons } from '@expo/vector-icons';
 import { RFValue } from 'react-native-responsive-fontsize';
+
+interface TypeProps {
+  type: 'income' | 'expense' | 'total';
+}
 
 export const Container = styled.View`
   width: 159px;
@@ -20,11 +24,19 @@ export const Header = styled.View`
   bottom: 5px;
 `;
 
-export const Icon = styled(Ionicons)`
-  font-size: ${RFValue(26)}px;
-  color: ${({ theme }) => theme.colors.total};
+export const Icon = styled(Ionicons)<TypeProps>`
+  font-size: ${RFValue(27)}px;
   margin-right: 5px;
 
+  ${(props) => props.type === 'total' && css`
+    color: ${({ theme }) => theme.colors.total};
+  `}
+  ${(props) => props.type === 'income' && css`
+    color: ${({ theme }) => theme.colors.income};
+  `}
+  ${(props) => props.type === 'expense' && css`
+    color: ${({ theme }) => theme.colors.expense};
+  `}
 `;
 
 export const Title = styled.Text`
