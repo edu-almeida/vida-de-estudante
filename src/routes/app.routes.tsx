@@ -6,6 +6,7 @@ import { Home } from '../screens/Home';
 import { useTheme } from 'styled-components';
 import { Platform } from 'react-native';
 import { ButtonNewTransaction } from '../components/ButtonNewTransaction';
+import { Register } from '../screens/Register';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -21,19 +22,21 @@ export function AppRoutes() {
           tabBarInactiveTintColor: theme.colors.subtitle,
           tabBarLabelPosition: 'below-icon',
           tabBarStyle: {
-            height: 56,
+            height: 54,
             backgroundColor: theme.colors.background_dark,
             borderTopColor: 'transparent',
             paddingVertical: Platform.OS === 'ios' ? 20 : 0,
+            paddingBottom: 15,
           },
         }}
       >
         <Screen name="Home" component={Home} options={{
+          
           tabBarIcon: ({size, color}) => (
             <Entypo name="home" size={size} color={color}/>
           ),
         }} />
-        <Screen name="Nova Transação" component={Home}  options={{
+        <Screen name="Nova Transação" component={Register}  options={{
           tabBarLabel:'',
           tabBarIcon: ({focused, size, color}) => (
             <ButtonNewTransaction size={size} color={color} isFocused={focused}/>

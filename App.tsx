@@ -10,7 +10,7 @@ import {
 import { ThemeProvider } from 'styled-components';
 import theme from './src/global/styles/theme';
 import { StatusBar } from 'react-native';
-import { Home } from './src/screens/Home';
+import { AppRoutes } from './src/routes/app.routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_500Medium });
@@ -25,7 +25,7 @@ export default function App() {
         backgroundColor={theme.colors.background_dark}
         translucent
       />
-      <Home />
+      <AppRoutes />
     </ThemeProvider>
   );
 }
