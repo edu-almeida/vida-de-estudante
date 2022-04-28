@@ -6,7 +6,7 @@ interface TypeProps {
   type: 'save' | 'cancel';
 }
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
   justify-content: center;
